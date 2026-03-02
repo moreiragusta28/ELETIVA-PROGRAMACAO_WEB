@@ -54,5 +54,17 @@ class ExercicioController extends Controller {
         }
     }
 
+
+    public function exibirFormulario5(){
+        return view('exercicio5');
+    }
+    public function calcularMedia(Request $request){
+        $nota1 = $request->input('nota1');
+        $nota2 = $request->input('nota2');
+        $nota3 = $request->input('nota3');
+        $media = ($nota1 + $nota2 + $nota3) / 3;
+        return view('exercicio5', ['media' => $media]);
+    }
+
 }
 
