@@ -66,5 +66,27 @@ class ExercicioController extends Controller {
         return view('exercicio5', ['media' => $media]);
     }
 
+
+    public function exibirFormulario6(){
+        return view('exercicio6');
+    }
+    public function conversaoC2F(Request $request){
+        $celsius = $request->input('celsius');
+        $conversao = ($celsius * 1.8) + 32;
+        return view('exercicio6', ['conversao' => $conversao]);
+    }
+
+
+    public function exibirFormulario7(){
+        return view('exercicio7');
+    }
+    public function conversaoF2C(Request $request){
+        $fahrenheit = $request->input('fahrenheit');
+        $conversao = ($fahrenheit - 32) * 5 / 9;
+        return view('exercicio7', ['conversao' => $conversao]);
+    }
+
+
+
 }
 

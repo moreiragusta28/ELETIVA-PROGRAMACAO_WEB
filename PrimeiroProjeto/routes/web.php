@@ -24,3 +24,10 @@ Route::post('/resposta4', [ExercicioController::class, 'calcularDiv']);
 
 Route::get('/exercicio5', [ExercicioController::class, 'exibirFormulario5']);
 Route::post('/resposta5', [ExercicioController::class, 'calcumarMedia']);
+
+Route::get('/exercicio6', [ExercicioController::class, 'exibirFormulario6']);
+Route::post('/resposta6', [ExercicioController::class, 'conversaoC2F']);
+
+Route::get('/exercicio7', [ExercicioController::class, 'exibirFomulario7']);
+Route::post('/resposta7', [ExercicioController::class, 'conversaoF2C']);
+
