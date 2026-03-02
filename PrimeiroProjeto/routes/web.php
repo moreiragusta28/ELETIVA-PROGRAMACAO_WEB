@@ -31,3 +31,9 @@ Route::post('/resposta6', [ExercicioController::class, 'conversaoC2F']);
 Route::get('/exercicio7', [ExercicioController::class, 'exibirFomulario7']);
 Route::post('/resposta7', [ExercicioController::class, 'conversaoF2C']);
 
+Route::get('/exercicio8', [ExercicioController::class, 'exibirFormulario8']);
+Route::post('/resposta8', [ExercicioController::class, 'calculoArea']);
+
+Route::get('/exercicio9', [ExercicioController::class, 'exibitFormulario9']);
+Route::post('/resposta9', [ExercicioController::class, 'calculoAreaCirculo']);
+

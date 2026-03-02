@@ -87,6 +87,28 @@ class ExercicioController extends Controller {
     }
 
 
+    public function exibirFormulario8(){
+        return view('exercicio8');
+    }
+    public function calcularArea(Request $request){
+        $largura = $request->input('largura');
+        $altura = $request->input('altura');
+        $area = $largura * $altura;
+        return view('exercicio8', ['area' => $altura]);
+    }
+
+
+    public function exibirFormulario9(){
+        return view('exercicio9');
+    }
+    public function calcularAreaCirculo(Request $request){
+        $raio = $request->input('raio');
+        $area = ($raio ** 2) * 3.14;
+        return view('exercicio9', ['area' => $area]);
+
+    }
+
+
 
 }
 
