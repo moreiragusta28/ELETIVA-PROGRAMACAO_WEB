@@ -189,8 +189,20 @@ class ExercicioController extends Controller {
         $capital = $request->input('capital');
         $taxa = $request->input('taxa');
         $periodo = $request->input('periodo');
-        $resultado = $capital * $taxa * $periodo;
+        $resultado = $capital * ($taxa/100) * $periodo;
         return view('exercicio17', ['resultado' => $resultado]);
+    }
+
+
+    public function exibirFormulario18(){
+        return view('exercicio18');
+    }
+    public function calcularJurosComposto(Request $request){
+        $capital = $request->input('capital');
+        $taxa = $request->input('taxa');
+        $periodo = $request->input('periodo');
+        $resultado = $capital * ((1 + ($taxa/100)) ^ $periodo);
+        return view('exercicio18', ['resultado' => $resultado]);
     }
 
 
