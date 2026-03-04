@@ -34,6 +34,32 @@ Route::post('/resposta7', [ExercicioController::class, 'conversaoF2C']);
 Route::get('/exercicio8', [ExercicioController::class, 'exibirFormulario8']);
 Route::post('/resposta8', [ExercicioController::class, 'calculoArea']);
 
-Route::get('/exercicio9', [ExercicioController::class, 'exibitFormulario9']);
+Route::get('/exercicio9', [ExercicioController::class, 'exibirFormulario9']);
 Route::post('/resposta9', [ExercicioController::class, 'calculoAreaCirculo']);
+
+Route::get('/exercicio10', [ExercicioController::class, 'exibirFormulario10']);
+Route::post('/resposta10', [ExercicioController::class, 'calculoPerimetroRet']);
+
+Route::get('/exercicio11', [ExercicioController::class, 'exibirFormulario11']);
+Route::post('/resposta11', [ExercicioController::class, 'calculoPerimetroCirc']);
+
+Route::get('/exercicio12', [ExercicioController::class, 'exibirFormulario12']);
+Route::post('/resposta12', [ExercicioController::class, 'calcularPotencia']);
+
+Route::get('/exercicio13', [ExercicioController::class, 'exibirFormulario13']);
+Route::post('/resposta13', [ExercicioController::class, 'calcularCentrimetos']);
+
+Route::get('/exercicio14', [ExercicioController::class, 'exibirFormulario14']);
+Route::post('/resposta14', [ExercicioController::class, 'calcularMilhas']);
+
+Route::get('/exercicio15', [ExercicioController::class, 'exibirFormulario15']);
+Route::post('/resposta15', [ExercicioController::class, 'calcularIMC']);
+
+Route::get('/exercicio16', [ExercicioController::class, 'exibirFormulario16']);
+Route::post('/resposta16', [ExercicioController::class, 'calcularDesconto']);
+
+Route::get('/exercicio17', [ExercicioController::class, 'exibirFormulario17']);
+Route::post('/resposta17', [ExercicioController::class, 'calcularJurosSimples']);
+
+
 

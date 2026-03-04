@@ -105,8 +105,96 @@ class ExercicioController extends Controller {
         $raio = $request->input('raio');
         $area = ($raio ** 2) * 3.14;
         return view('exercicio9', ['area' => $area]);
-
     }
+
+
+    public function exibirFormulario10(){
+        return view('exercicio10');
+    }
+    public function cacularPerimetroRet(Request $request){
+        $largura = $request->input('largura');
+        $altura = $request->input('altura');
+        $perimetro = ($largura * 2) + ($altura * 2);
+        return view('exercicio10', ['perimetro' => $perimetro]);
+    }
+
+
+    public function exibirFormulario11(){
+        return view('exercicio11');
+    }
+    public function calcularPerimetroCirc(Request $request){
+        $raio = $request->input('raio');
+        $perimetro = 2 * 3.14 * $raio;
+        return view('exercicio11', ['perimetro' => $perimetro]);
+    }
+
+
+    public function exibirFormulario12(){
+        return view('exercicio12');
+    }
+    public function calcularPotencia(Request $request){
+        $base = $request->input('base');
+        $expoente = $request->input('expoente');
+        $resultado = $base ** $expoente;
+        return view('exercicio12', ['resultado' => $resultado]);
+    }
+
+
+    public function exibirFormulario13(){
+        return view('exercicio13');
+    }
+    public function calcularCentimetros(Request $request){
+        $metros = $request->input('metros');
+        $conversao = $metros * 100;
+        return view('exercicio13', ['conversao' => $conversao]);
+    }
+
+
+    public function exibirFormulario14(){
+        return view('exercicio14');
+    }
+    public function calcularMilhas(Request $request){
+        $km = $request->input('km');
+        $conversao = $km * 0.621371;
+        return view('exercicio14', ['conversao' => $conversao]);
+    }
+
+
+    public function exibirFormulario15(){
+        return view('exercicio15');
+    }
+    public function calcularIMC(Request $request){
+        $peso = $request->input('peso');
+        $altura = $request->input('altura');
+        $imc = ($peso / ($altura ** 2));
+        return view('exercicio15', ['imc' => $imc]);
+    }
+
+
+    public function exibirFormulario16(){
+        return view('exercicio16');
+    }
+    public function calcularDesconto(Request $request){
+        $valorTotal = $request->input('valorTotal');
+        $desconto = $request->input('desconto');
+        $novoValor = $valorTotal - ($valorTotal * $desconto);
+        return view('exercicio16', ['novoValor' => $novoValor]);
+    }
+
+
+    public function exirbirFormulario17(){
+        return view('exercicio17');
+    }
+    public function calcularJurosSimples(Request $request){
+        $capital = $request->input('capital');
+        $taxa = $request->input('taxa');
+        $periodo = $request->input('periodo');
+        $resultado = $capital * $taxa * $periodo;
+        return view('exercicio17', ['resultado' => $resultado]);
+    }
+
+
+
 
 
 
