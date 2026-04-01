@@ -205,9 +205,32 @@ class ExercicioController extends Controller {
         return view('exercicio18', ['resultado' => $resultado]);
     }
 
+    public function exibirFormulario19(){
+        return view('exercicio19');
+    }
+    public function converterDias(Request $request){
+        $dias = $request->input('dias');
+        $horas = $dias * 24;
+        $minutos = $horas * 60;
+        $segundos = $minutos * 60;
+        $resultado = [
+            'dias' => $dias,
+            'horas' => $horas,
+            'minutos' => $minutos,
+            'segundos' => $segundos
+        ];
+        return view('exercicio19', ['resultado' => $resultado]);
+    }
 
-
-
+    public function exibirFormulario20(){
+        return view('exercicio20');
+    }
+    public function calcularVelocidade(Request $request){
+        $distancia = $request->input('distancia');
+        $tempo = $request->input('tempo');
+        $resultado = $distancia / $tempo;
+        return view('exercicio20', ['resultado' => $resultado]);
+    }
 
 
 }

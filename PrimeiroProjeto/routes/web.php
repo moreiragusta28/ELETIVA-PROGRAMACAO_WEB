@@ -64,3 +64,8 @@ Route::post('/resposta17', [ExercicioController::class, 'calcularJurosSimples'])
 Route::get('/exercicio18', [ExercicioController::class, 'exibirFormulario18']);
 Route::post('/resposta18', [ExercicioController::class, 'calcularJurosComposto']);
 
+Route::get('/exercicio19', [ExercicioController::class, 'exibirFormulario19']);
+Route::post('/resposta19', [ExercicioController::class, 'converterDias']);
+
+Route::get('/exercicio20', [ExercicioController::class, 'exibirFormulario20']);
+Route::post('/resposta20', [ExercicioController::class, 'calcularVelocidade']);
